@@ -6,27 +6,20 @@ import { Home, SingleProduct, Cart, Checkout, Error, About, Products, PrivateRou
 function App() {
   return (
     <Router>
-      <Navbar/>
-      <Sidebar/>
+      <Navbar />
+      <Sidebar />
       <Routes>
         <Route path="/" element={<Home />} />
-
         <Route path="/about" element={<About />} />
-
         <Route path="/cart" element={<Cart />} />
-
         <Route path="/products" element={<Products />} />
-
         <Route path="/products" element={<SingleProduct />}>
           <Route path=":id" element={<Products />} />
         </Route>
-
         <Route path="/checkout" element={<Checkout />} />
-
         <Route path="*" element={<Error />} />
-
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   );
 }
